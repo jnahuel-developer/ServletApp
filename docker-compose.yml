@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - tomcat
+
+  tomcat:
+    image: tomcat:9.0
+    ports:
+      - "8081:8080"
